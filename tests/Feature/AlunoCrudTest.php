@@ -29,7 +29,7 @@ class AlunoCrudTest extends TestCase
 
     public function test_aluno_can_update_aluno()
     {
-        $aluno = User::factory()->create();
+        $aluno = Aluno::factory()->create();
         Aluno::factory()->create();
         $this->assertCount(1, Aluno::all());
         $aluno = Aluno::first();
@@ -47,7 +47,7 @@ class AlunoCrudTest extends TestCase
 
     public function test_aluno_can_delete_aluno()
     {
-        $aluno = User::factory()->create();
+        $aluno = Aluno::factory()->create();
         $aluno =  Aluno::factory()->create();
         $this->assertEquals(1, Aluno::count());
         $response = $this->actingAs($$aluno)->delete('/aluno' . $aluno->id);
@@ -57,9 +57,9 @@ class AlunoCrudTest extends TestCase
 
     public function test_auth_aluno_can_access_dashboard()
     {
-        $aluno = User::factory()->create();
+        $aluno = Aluno::factory()->create();
 
-        $response = $this->actingAs($aluno)->get('/');
+        $response = $this->actingAs($$aluno)->get('/');
 
         $response->assertStatus(200);
     }

@@ -22,20 +22,20 @@ class AlunoRouteTest extends TestCase
     public function test_checking_the_aluno_page_route_returns_a_successful_response(): void
     {
         $response = $this->get('../aluno');
-        $response->assertStatus(404);
+        $response->assertStatus(200);
     }
 
     public function test_checking_the_aluno_edit_page_route_returns_a_successful_response(): void
     {
         $response = $this->get('../aluno/edit');
 
-        $response->assertStatus(404);
+        $response->assertStatus(200);
     }
 
     public function test_checking_the_aluno_create_page_route_returns_a_successful_response(): void
     {
         $response = $this->get('/aluno/novo');
 
-        $response->assertStatus(404);
+        $response->assertStatus(200);
     }
 }

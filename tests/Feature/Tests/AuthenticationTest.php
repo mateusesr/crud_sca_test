@@ -22,7 +22,7 @@ test('alunos can authenticate using the alunos screen', function () {
 });
 
 test('alunos can not authenticate with invalid login', function () {
-    $aluno = User::factory()->create();
+    $aluno = Aluno::factory()->create();
 
     $this->post('/alunos', [
         'email' => $aluno->email

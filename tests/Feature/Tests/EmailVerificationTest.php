@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
 
 test('email verification screen can be rendered', function () {
-    $aluno = User::factory()->create([
+    $aluno = Aluno::factory()->create([
         'email_verified_at' => null,
     ]);
 
@@ -18,7 +18,7 @@ test('email verification screen can be rendered', function () {
 });
 
 test('email can be verified', function () {
-    $aluno = User::factory()->create([
+    $aluno = Aluno::factory()->create([
         'email_verified_at' => null,
     ]);
 

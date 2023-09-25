@@ -16,7 +16,7 @@ test('aluno screen can be rendered', function () {
 test('edit screen can be rendered', function () {
     $response = $this->get('/alunos/edit/{$id}');
 
-    $response->assertStatus(404);
+    $response->assertStatus(200);
 });
 test('aluno novo screen can be rendered', function () {
     $response = $this->get('/alunos/novo');

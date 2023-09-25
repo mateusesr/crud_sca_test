@@ -4,7 +4,7 @@ use App\Models\User;
 use App\Models\Aluno;
 
 test('confirm password screen can be rendered', function () {
-    $aluno = User::factory()->create();
+    $aluno = Aluno::factory()->create();
 
     $response = $this->actingAs($aluno)->get('/confirm-password');
 
@@ -12,7 +12,7 @@ test('confirm password screen can be rendered', function () {
 });
 
 test('password can be confirmed', function () {
-    $aluno = User::factory()->create();
+    $aluno = Aluno::factory()->create();
 
     $response = $this->actingAs($aluno)->post('/confirm-password', [
         'password' => 'password',
