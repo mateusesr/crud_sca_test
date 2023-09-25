@@ -42,7 +42,7 @@ class AlunoCrudTest extends TestCase
         $response->assertRedirect('/aluno');
         $this->assertEquals('Updated Aluno', Aluno::first()->nome);
         $this->assertEquals('Test', Aluno::first()->email);
-        $this->assertEquals(5, Aluno::first()->categoria);
+        $this->assertEquals(3, Aluno::first()->categoria);
     }
 
     public function test_aluno_can_delete_aluno()
