@@ -27,7 +27,7 @@ class AlunoRouteTest extends TestCase
 
     public function test_checking_the_aluno_edit_page_route_returns_a_successful_response(): void
     {
-        $response = $this->get('../aluno/edit');
+        $response = $this->get('../aluno/edit{id}');
 
         $response->assertStatus(200);
     }
