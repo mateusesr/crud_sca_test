@@ -2,7 +2,6 @@
 
 
 use App\Models\Aluno;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use Routes\web;
@@ -25,7 +24,7 @@ class AlunoRouteTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_checking_the_aluno_edit_page_route_returns_a_successful_response(): void 
+    public function test_checking_the_aluno_edit_page_route_returns_a_successful_response(): void
     {
         $response = $this->get('../aluno/edit{id}');
 
