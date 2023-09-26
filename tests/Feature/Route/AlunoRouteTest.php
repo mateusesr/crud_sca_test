@@ -38,4 +38,10 @@ class AlunoRouteTest extends TestCase
 
         $response->assertStatus(200);
     }
+    public function test_checking_the_invalid_page_route_returns_a_negative_response(): void
+    {
+        $response = $this->get('/rota_invalida_teste');
+
+        $response->assertStatus(404);
+    }
 }

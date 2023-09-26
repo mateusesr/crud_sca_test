@@ -23,3 +23,8 @@ test('aluno novo screen can be rendered', function () {
 
     $response->assertStatus(200);
 });
+test('invalid screen can be rendered', function () {
+    $response = $this->get('/tela_invalida_teste');
+
+    $response->assertStatus(404);
+});
