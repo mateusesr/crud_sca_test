@@ -41,7 +41,7 @@ class AlunoRouteTest extends TestCase
 
     public function test_checking_invalid_route_returns_a_successful_response(): void
     {
-        $response = $this->get('/rota/invalida');
+        $response = $this->get('/rota_invalida_teste');
 
         $response->assertStatus(200);
     }
