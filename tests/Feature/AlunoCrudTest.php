@@ -65,6 +65,6 @@ class AlunoCrudTest extends TestCase
     public function test_unath_aluno_cannot_access_dashboard()
     {
         $response = $this->get('/');
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 }
