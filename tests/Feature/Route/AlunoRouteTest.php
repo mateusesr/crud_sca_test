@@ -39,10 +39,10 @@ class AlunoRouteTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_checking_invalid_route_returns_a_successful_response(): void
+    public function test_checking_invalid_route_returns_a_negative_response(): void
     {
         $response = $this->get('/rota_invalida_teste');
 
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 }
