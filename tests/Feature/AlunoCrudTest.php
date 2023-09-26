@@ -9,8 +9,6 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 
-
-
 class AlunoCrudTest extends TestCase
 {
     public function test_aluno_can_create_new_aluno()
