@@ -21,7 +21,7 @@ test('edit screen can be rendered', function () {
 test('aluno novo screen can be rendered', function () {
     $response = $this->get('/alunos/novo');
 
-    $response->assertStatus(200);
+    $response->assertStatus(200); 
 });
 test('invalid screen can be rendered', function () {
     $response = $this->get('/tela_invalida_teste');
